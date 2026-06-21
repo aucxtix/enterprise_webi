@@ -1,0 +1,120 @@
+/* Root CSS Variables - Sophisticated Light Corporate Palette */
+:root {
+  /* Cobalt Blue */
+  --color-primary: #0047AB;
+  --color-primary-dark: #003380;
+  
+  /* Matte Silver & Grays */
+  --color-silver-50: #f8f9fa;
+  --color-silver-100: #f1f3f5;
+  --color-silver-300: #dee2e6;
+  --color-silver-500: #A8A9AD;
+  --color-silver-700: #495057;
+  --color-silver-900: #212529;
+
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --header-height: 80px;
+}
+
+/* Base Configuration */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Navigation */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glassmorphism.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Background Animation */
+#hero-pattern {
+  background-image: radial-gradient(var(--color-silver-300) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: bgPan 40s linear infinite;
+}
+
+@keyframes bgPan {
+  0% { background-position: 0 0; }
+  100% { background-position: 400px 400px; }
+}
+
+/* Scroll Triggered Fade-ins */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+
+/* Portfolio Masonry & Filtering */
+.portfolio-item {
+  transition: opacity 0.5s var(--transition-smooth), transform 0.5s var(--transition-smooth);
+  transform-origin: center center;
+}
+
+.portfolio-item.hidden-item {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Job Accordion Styles */
+.job-accordion button[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.job-accordion button[aria-expanded="true"] {
+  background-color: var(--color-silver-50);
+}
+
+/* Lightbox Modal */
+#portfolio-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#portfolio-lightbox.active #lightbox-body {
+  transform: scale(1);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+  padding-right: 15px; /* Prevent layout shift from scrollbar */
+}
+
+/* Form Styles */
+input:focus:invalid, textarea:focus:invalid {
+  border-color: #ef4444;
+}
+
+input:focus:invalid + .error-msg, textarea:focus:invalid + .error-msg {
+  display: block;
+}

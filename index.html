@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Enterprise Corporate Platform">
+    <title>Enterprise Corporate Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cobalt: {
+                            500: '#0047AB', /* Primary Cobalt Blue */
+                            600: '#003380',
+                            700: '#002255'
+                        },
+                        silver: {
+                            50: '#f8f9fa',
+                            100: '#f1f3f5',
+                            300: '#dee2e6',
+                            500: '#A8A9AD', /* Matte Silver */
+                            700: '#495057',
+                            900: '#212529'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-silver-700 antialiased font-sans selection:bg-cobalt-500 selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glassmorphism transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-2xl font-bold text-silver-900 tracking-tight" aria-label="Home">
+                    Apex<span class="text-cobalt-500">Corp</span>
+                </a>
+
+                <nav class="hidden md:flex space-x-8 items-center" aria-label="Main Navigation">
+                    <a href="#home" class="text-sm font-medium text-silver-700 hover:text-cobalt-500 transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-silver-700 hover:text-cobalt-500 transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium text-silver-700 hover:text-cobalt-500 transition-colors">Services</a>
+                    <a href="#portfolio" class="text-sm font-medium text-silver-700 hover:text-cobalt-500 transition-colors">Portfolio</a>
+                    <a href="#blog" class="text-sm font-medium text-silver-700 hover:text-cobalt-500 transition-colors">Blog</a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent rounded-sm text-sm font-medium text-white bg-cobalt-500 hover:bg-cobalt-600 transition-all shadow-sm hover:shadow-md">
+                        Get in Touch
+                    </a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-btn inline-flex items-center justify-center p-2 rounded-md text-silver-700 hover:text-cobalt-500 hover:bg-silver-50 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle Navigation">
+                        <svg class="block h-6 w-6 menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6 close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden bg-white border-b border-silver-100 absolute w-full left-0 top-20 shadow-lg" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-silver-900 hover:text-cobalt-500 hover:bg-silver-50 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-silver-900 hover:text-cobalt-500 hover:bg-silver-50 rounded-md">About</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-silver-900 hover:text-cobalt-500 hover:bg-silver-50 rounded-md">Services</a>
+                <a href="#portfolio" class="block px-3 py-3 text-base font-medium text-silver-900 hover:text-cobalt-500 hover:bg-silver-50 rounded-md">Portfolio</a>
+                <a href="#blog" class="block px-3 py-3 text-base font-medium text-silver-900 hover:text-cobalt-500 hover:bg-silver-50 rounded-md">Blog</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-base font-medium text-white bg-cobalt-500 hover:bg-cobalt-600 rounded-sm text-center">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-silver-50">
+            <div class="absolute inset-0 z-0 opacity-30" id="hero-pattern"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-silver-900 tracking-tight mb-6 fade-up">
+                    Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cobalt-500 to-cobalt-700">Digital Trust</span>
+                </h1>
+                <p class="mt-4 max-w-2xl text-xl text-silver-700 mx-auto mb-10 fade-up delay-100">
+                    We architect scalable, enterprise-grade digital platforms that empower global organizations to innovate with confidence.
+                </p>
+                <div class="flex justify-center gap-4 fade-up delay-200">
+                    <a href="#services" class="px-8 py-4 border border-transparent text-base font-medium rounded-sm text-white bg-cobalt-500 hover:bg-cobalt-600 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                        Explore Solutions
+                    </a>
+                    <a href="#portfolio" class="px-8 py-4 border border-silver-300 text-base font-medium rounded-sm text-silver-900 bg-white hover:bg-silver-50 transition-all hover:-translate-y-0.5">
+                        View Case Studies
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-24 border-t border-silver-300/50 pt-10">
+                <p class="text-center text-sm font-medium text-silver-500 uppercase tracking-widest mb-8">Trusted by industry leaders</p>
+                <div class="max-w-7xl mx-auto px-4 overflow-hidden">
+                    <div class="flex justify-between items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500 flex-wrap gap-8 lg:gap-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-8 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="h-8 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" class="h-8 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-8 object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-sm font-bold text-cobalt-500 uppercase tracking-wider mb-2">Our Narrative</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-silver-900 mb-6 leading-tight">Defining the future of enterprise architecture since 2012.</h3>
+                        <p class="text-lg text-silver-700 mb-6">
+                            ApexCorp was founded on a singular principle: to bridge the gap between complex engineering requirements and flawless user experience. We build systems that perform securely at global scale.
+                        </p>
+                        
+                        <div class="space-y-6 mt-10 border-l-2 border-silver-100 pl-6 ml-2">
+                            <div class="relative">
+                                <div class="absolute -left-[31px] bg-white border-2 border-cobalt-500 w-4 h-4 rounded-full mt-1.5"></div>
+                                <h4 class="text-xl font-bold text-silver-900">2024</h4>
+                                <p class="text-silver-700">Expanded global infrastructure and launched AI-driven analytics core.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-[31px] bg-white border-2 border-silver-300 w-4 h-4 rounded-full mt-1.5"></div>
+                                <h4 class="text-xl font-bold text-silver-900">2018</h4>
+                                <p class="text-silver-700">Partnered with Fortune 500 tech leaders for enterprise cloud migrations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="group relative overflow-hidden rounded-sm bg-silver-100 aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="CEO" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-gradient-to-t from-silver-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+                                <h4 class="text-lg font-bold">Marcus Reed</h4>
+                                <p class="text-sm text-silver-300">Chief Executive Officer</p>
+                            </div>
+                        </div>
+                        <div class="group relative overflow-hidden rounded-sm bg-silver-100 aspect-[4/5] mt-10">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="CTO" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-gradient-to-t from-silver-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+                                <h4 class="text-lg font-bold">Elena Vance</h4>
+                                <p class="text-sm text-silver-300">Chief Technology Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-silver-50 border-y border-silver-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold text-cobalt-500 uppercase tracking-wider mb-2">Capabilities</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-silver-900 mb-4">Strategic Engineering Solutions</h3>
+                    <p class="text-lg text-silver-700">Comprehensive full-stack architecture tailored for high-stakes enterprise environments.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border border-silver-100 group">
+                        <div class="w-14 h-14 bg-silver-50 text-cobalt-500 flex items-center justify-center rounded-sm mb-6 group-hover:bg-cobalt-500 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-silver-900 mb-3">Cloud Infrastructure</h4>
+                        <p class="text-silver-700 mb-6">Scalable, secure cloud deployment architectures optimized for zero-downtime and high availability.</p>
+                        <a href="#contact" class="text-cobalt-500 font-medium hover:text-cobalt-700 inline-flex items-center" aria-label="Consult regarding Cloud Infrastructure">
+                            Consult Now <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border border-silver-100 group">
+                        <div class="w-14 h-14 bg-silver-50 text-cobalt-500 flex items-center justify-center rounded-sm mb-6 group-hover:bg-cobalt-500 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-silver-900 mb-3">Full-Stack Development</h4>
+                        <p class="text-silver-700 mb-6">End-to-end bespoke software creation utilizing robust frameworks and relational database architectures.</p>
+                        <a href="#contact" class="text-cobalt-500 font-medium hover:text-cobalt-700 inline-flex items-center" aria-label="Consult regarding Full-Stack Development">
+                            Consult Now <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border border-silver-100 group">
+                        <div class="w-14 h-14 bg-silver-50 text-cobalt-500 flex items-center justify-center rounded-sm mb-6 group-hover:bg-cobalt-500 group-hover:text-white transition-colors duration-300">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-silver-900 mb-3">Cybersecurity Audit</h4>
+                        <p class="text-silver-700 mb-6">Comprehensive penetration testing and compliance checks for WCAG and enterprise security standards.</p>
+                        <a href="#contact" class="text-cobalt-500 font-medium hover:text-cobalt-700 inline-flex items-center" aria-label="Consult regarding Cybersecurity Audit">
+                            Consult Now <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-sm font-bold text-cobalt-500 uppercase tracking-wider mb-2">Our Work</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-silver-900">Proven Results</h3>
+                    </div>
+                    
+                    <!-- Filters -->
+                    <div class="flex space-x-2 bg-silver-50 p-1 rounded-sm border border-silver-100" role="group" aria-label="Portfolio Category Filters">
+                        <button class="filter-btn active px-4 py-2 text-sm font-medium rounded-sm bg-white text-silver-900 shadow-sm transition-all" data-filter="all">All</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-sm text-silver-600 hover:text-silver-900 transition-all" data-filter="fintech">Fintech</button>
+                        <button class="filter-btn px-4 py-2 text-sm font-medium rounded-sm text-silver-600 hover:text-silver-900 transition-all" data-filter="health">HealthTech</button>
+                    </div>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-sm aspect-[4/3] bg-silver-100 cursor-pointer" data-category="fintech" tabindex="0" aria-label="View Fintech Core System Case Study">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Fintech Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-silver-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <span class="text-cobalt-500 font-bold text-xs uppercase tracking-widest mb-2">Fintech</span>
+                            <h4 class="text-2xl font-bold text-white">Global Ledger System</h4>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-sm aspect-[3/4] bg-silver-100 cursor-pointer lg:row-span-2" data-category="health" tabindex="0" aria-label="View HealthTech Portal Case Study">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Medical Tablet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-silver-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <span class="text-cobalt-500 font-bold text-xs uppercase tracking-widest mb-2">HealthTech</span>
+                            <h4 class="text-2xl font-bold text-white">MedSecure Portal</h4>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-sm aspect-[4/3] bg-silver-100 cursor-pointer" data-category="fintech" tabindex="0" aria-label="View Banking App Case Study">
+                        <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80" alt="Banking App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-silver-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <span class="text-cobalt-500 font-bold text-xs uppercase tracking-widest mb-2">Fintech</span>
+                            <h4 class="text-2xl font-bold text-white">Retail Banking UX</h4>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-sm aspect-[4/3] bg-silver-100 cursor-pointer lg:col-span-2" data-category="all" tabindex="0" aria-label="View Enterprise Resource Planning Case Study">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Data Analytics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-silver-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                            <span class="text-cobalt-500 font-bold text-xs uppercase tracking-widest mb-2">Enterprise</span>
+                            <h4 class="text-2xl font-bold text-white">ERP Migration Strategy</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section (Headless CMS Ready) -->
+        <section id="blog" class="py-24 bg-silver-50 border-t border-silver-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-12">
+                    <div>
+                        <h2 class="text-sm font-bold text-cobalt-500 uppercase tracking-wider mb-2">Insights</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-silver-900">Engineering Journal</h3>
+                    </div>
+                    <a href="#" class="hidden md:inline-flex text-cobalt-500 font-medium hover:text-cobalt-700 items-center">View All Articles <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <article class="bg-white border border-silver-100 rounded-sm overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="aspect-video bg-silver-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Code on screen" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-silver-500 mb-3 space-x-4">
+                                <span>Architecture</span>
+                                <span>•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-silver-900 mb-3 hover:text-cobalt-500 transition-colors"><a href="#">Microservices vs Monolithic in 2024</a></h4>
+                            <p class="text-silver-700 text-sm mb-4">A deep dive into structural paradigms for modern enterprise applications.</p>
+                            <div class="flex items-center mt-4 pt-4 border-t border-silver-100">
+                                <div class="w-8 h-8 rounded-full bg-silver-300 overflow-hidden mr-3">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Author" class="w-full h-full object-cover">
+                                </div>
+                                <span class="text-sm font-medium text-silver-900">Marcus Reed</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Article 2 -->
+                    <article class="bg-white border border-silver-100 rounded-sm overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="aspect-video bg-silver-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=600&q=80" alt="Server room" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-silver-500 mb-3 space-x-4">
+                                <span>Security</span>
+                                <span>•</span>
+                                <span>8 min read</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-silver-900 mb-3 hover:text-cobalt-500 transition-colors"><a href="#">Zero Trust Network Implementation</a></h4>
+                            <p class="text-silver-700 text-sm mb-4">Securing enterprise perimeters with strict identity verification protocols.</p>
+                            <div class="flex items-center mt-4 pt-4 border-t border-silver-100">
+                                <div class="w-8 h-8 rounded-full bg-silver-300 overflow-hidden mr-3">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Author" class="w-full h-full object-cover">
+                                </div>
+                                <span class="text-sm font-medium text-silver-900">Elena Vance</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Article 3 -->
+                    <article class="bg-white border border-silver-100 rounded-sm overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="aspect-video bg-silver-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-silver-500 mb-3 space-x-4">
+                                <span>UX Design</span>
+                                <span>•</span>
+                                <span>4 min read</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-silver-900 mb-3 hover:text-cobalt-500 transition-colors"><a href="#">WCAG 2.1 AA Compliance Strategies</a></h4>
+                            <p class="text-silver-700 text-sm mb-4">Ensuring digital accessibility across corporate interfaces.</p>
+                            <div class="flex items-center mt-4 pt-4 border-t border-silver-100">
+                                <div class="w-8 h-8 rounded-full bg-cobalt-500 flex items-center justify-center text-white text-xs font-bold mr-3">
+                                    AC
+                                </div>
+                                <span class="text-sm font-medium text-silver-900">ApexCorp Design</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers Section -->
+        <section id="careers" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-silver-900 mb-4">Join Our Engineering Team</h2>
+                    <p class="text-silver-700">We are always seeking exceptional talent to solve complex architectural challenges.</p>
+                </div>
+
+                <!-- Job Accordions (Ready for PHP/MySQL Injection) -->
+                <div class="space-y-4" id="job-board">
+                    <!-- Job 1 -->
+                    <div class="border border-silver-300 rounded-sm overflow-hidden job-accordion">
+                        <button class="w-full px-6 py-5 flex justify-between items-center bg-white hover:bg-silver-50 focus:outline-none focus:bg-silver-50 transition-colors" aria-expanded="false" aria-controls="job-desc-1">
+                            <div class="text-left">
+                                <h4 class="text-lg font-bold text-silver-900">Senior Full-Stack Engineer</h4>
+                                <span class="text-sm text-silver-500">Remote • Full-time</span>
+                            </div>
+                            <svg class="w-5 h-5 text-silver-500 transform transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="job-desc-1" class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-silver-50">
+                            <div class="py-6 border-t border-silver-200">
+                                <p class="text-silver-700 text-sm mb-4">We are looking for an expert in Node.js, React, and PostgreSQL to lead our core product architecture. You will be responsible for defining database schemas, API endpoints, and ensuring frontend/backend parity.</p>
+                                <button class="px-6 py-2 bg-cobalt-500 text-white text-sm font-medium rounded-sm hover:bg-cobalt-600 transition-colors">Apply via Portal</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Job 2 -->
+                    <div class="border border-silver-300 rounded-sm overflow-hidden job-accordion">
+                        <button class="w-full px-6 py-5 flex justify-between items-center bg-white hover:bg-silver-50 focus:outline-none focus:bg-silver-50 transition-colors" aria-expanded="false" aria-controls="job-desc-2">
+                            <div class="text-left">
+                                <h4 class="text-lg font-bold text-silver-900">UI/UX Architect</h4>
+                                <span class="text-sm text-silver-500">New York / Hybrid • Full-time</span>
+                            </div>
+                            <svg class="w-5 h-5 text-silver-500 transform transition-transform duration-300 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="job-desc-2" class="px-6 py-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-silver-50">
+                            <div class="py-6 border-t border-silver-200">
+                                <p class="text-silver-700 text-sm mb-4">Design enterprise interfaces ensuring WCAG 2.1 AA compliance and exceptional visual fidelity. Proficiency in Figma and CSS/Tailwind required.</p>
+                                <button class="px-6 py-2 bg-cobalt-500 text-white text-sm font-medium rounded-sm hover:bg-cobalt-600 transition-colors">Apply via Portal</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-silver-900 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">Initiate Dialogue.</h2>
+                        <p class="text-silver-300 text-lg mb-10">Connect with our architectural planning team to discuss your enterprise requirements.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-cobalt-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <div>
+                                    <h4 class="font-bold">Global Headquarters</h4>
+                                    <p class="text-silver-300 text-sm mt-1">100 Wall Street, Suite 500<br>New York, NY 10005</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-cobalt-500 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <div>
+                                    <h4 class="font-bold">Direct Inquiry</h4>
+                                    <p class="text-silver-300 text-sm mt-1">architecture@apexcorp.com<br>+1 (800) 555-0199</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stylized Map Placeholder -->
+                        <div class="mt-10 h-48 bg-silver-800 rounded-sm border border-silver-700 flex items-center justify-center opacity-80">
+                            <span class="text-silver-500 text-sm">[ Interactive Map Interface ]</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Validation handled via JS -->
+                    <div class="bg-white rounded-sm p-8 md:p-10 text-silver-900 shadow-2xl">
+                        <form id="enterprise-contact-form" novalidate>
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-bold text-silver-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-silver-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-cobalt-500 focus:border-transparent transition-all" placeholder="John Doe">
+                                <p class="error-msg text-red-500 text-xs mt-1 hidden">Please provide your full name.</p>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-bold text-silver-700 mb-2">Corporate Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-silver-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-cobalt-500 focus:border-transparent transition-all" placeholder="john@company.com">
+                                <p class="error-msg text-red-500 text-xs mt-1 hidden">Please provide a valid email address.</p>
+                            </div>
+                            <div class="mb-8">
+                                <label for="message" class="block text-sm font-bold text-silver-700 mb-2">Project Specifications</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-silver-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-cobalt-500 focus:border-transparent transition-all resize-y" placeholder="Briefly describe your architectural needs..."></textarea>
+                                <p class="error-msg text-red-500 text-xs mt-1 hidden">A project description is required.</p>
+                            </div>
+                            <button type="submit" class="w-full bg-cobalt-500 text-white font-bold py-4 rounded-sm hover:bg-cobalt-600 transition-colors shadow-md hover:shadow-lg flex items-center justify-center relative">
+                                <span id="submit-text">Submit Request</span>
+                                <svg id="submit-spinner" class="animate-spin h-5 w-5 absolute hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mega Footer -->
+    <footer class="bg-silver-900 border-t border-silver-800 pt-16 pb-8 text-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight mb-4 inline-block">Apex<span class="text-cobalt-500">Corp</span></a>
+                    <p class="text-sm text-silver-500 mb-6">Engineering digital trust for the modern enterprise through rigorous architecture and design.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-silver-500 hover:text-white transition-colors" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="#" class="text-silver-500 hover:text-white transition-colors" aria-label="Twitter"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-cobalt-500 transition-colors">About Us</a></li>
+                        <li><a href="#careers" class="hover:text-cobalt-500 transition-colors">Careers</a></li>
+                        <li><a href="#blog" class="hover:text-cobalt-500 transition-colors">Engineering Blog</a></li>
+                        <li><a href="#contact" class="hover:text-cobalt-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Solutions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-cobalt-500 transition-colors">Cloud Architecture</a></li>
+                        <li><a href="#" class="hover:text-cobalt-500 transition-colors">Frontend Ecosystems</a></li>
+                        <li><a href="#" class="hover:text-cobalt-500 transition-colors">Cybersecurity Auditing</a></li>
+                        <li><a href="#" class="hover:text-cobalt-500 transition-colors">Database Management</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Newsletter</h4>
+                    <p class="text-xs text-silver-500 mb-4">Subscribe for architectural insights and technical whitepapers.</p>
+                    <form class="flex" aria-label="Newsletter Subscription">
+                        <input type="email" required placeholder="Email address" class="bg-silver-800 text-white px-3 py-2 text-sm rounded-l-sm border border-silver-700 focus:outline-none focus:border-cobalt-500 w-full" aria-label="Email Address">
+                        <button type="submit" class="bg-cobalt-500 px-4 py-2 rounded-r-sm text-white hover:bg-cobalt-600 transition-colors" aria-label="Subscribe">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-silver-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-silver-500">
+                <p>&copy; 2024 ApexCorp Architecture. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="portfolio-lightbox" class="fixed inset-0 z-[100] bg-silver-900/95 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-hidden="true">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-silver-300 hover:text-white focus:outline-none" aria-label="Close Lightbox">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="max-w-5xl w-full bg-white rounded-sm overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col md:flex-row h-[70vh]" id="lightbox-body">
+            <!-- Content Injected via JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
